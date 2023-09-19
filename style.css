@@ -17,13 +17,13 @@ body {
     left: 50%;
     transform: translate(-50%, -50%);
     z-index: 1;
-    text-shadow: 0 0 10px white;
+    text-shadow: 0 0 100px white;
   }
   
   .star {
     position: absolute;
-    width: 5px;
-    height: 5px;
+    width: 1px;
+    height:1px;
     border-radius: 50%;
     pointer-events: none;
     
