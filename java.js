@@ -15,26 +15,3 @@ function createStar() {
 
 setInterval(createStar, 500);
 
-// Get the footer element by its id
-const footer = document.getElementById("myFooter");
-
-let prevScrollpos = window.pageYOffset;
-
-// Listen for scroll events
-window.addEventListener("scroll", () => {
-  // Get the current scroll position
-  const currentScrollPos = window.pageYOffset;
-
-  // If the user is scrolling up (previous scroll position is greater than current scroll position)
-  if (prevScrollpos > currentScrollPos) {
-    // Show the footer
-    footer.style.display = "block";
-  } else {
-    // Hide the footer
-    footer.style.display = "none";
-  }
-  
-  // Update the previous scroll position
-  prevScrollpos = currentScrollPos;
-});
-
