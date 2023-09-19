@@ -23,6 +23,11 @@ body {
     pointer-events: none;
     animation: twinkle 1.5s infinite;
   }
+
+.star {
+    box-shadow: 3px 2px 8px
+    rgb(255, 255, 255);
+  }
   
   @keyframes twinkle {
     0% { opacity: 1; }
