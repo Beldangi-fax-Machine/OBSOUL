@@ -1,0 +1,46 @@
+body {
+    background-color: black;
+    margin: 0;
+    overflow: hidden;
+  }
+  
+  #obsool {
+    font-size: 80px;
+    color: white;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+    text-shadow: 0 0 10px white;
+  }
+  
+  .star {
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    pointer-events: none;
+    animation: twinkle 1.5s infinite;
+  }
+  
+  @keyframes twinkle {
+    0% { opacity: 1; }
+    100% { opacity: 0; }
+  }
+
+
+  body {
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+  }
+  
+  #game-container {
+    position: relative;
+    height: 100vh;
+  }
+  
+ 
+    
+  
