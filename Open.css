@@ -1,0 +1,16 @@
+p {
+    color: rgb(255, 0, 0);
+    position: fixed;
+    top: 50%;
+    left: 35%;
+  }
+  
+  body {
+    background-color: black;
+    margin: 0;
+    overflow: hidden;
+   
+  }
+  body {
+    height: 100vh;
+  }
