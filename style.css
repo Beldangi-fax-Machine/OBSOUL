@@ -31,7 +31,7 @@ body {
     
   }
   .star {
-    box-shadow: 3px 4px 7px
+    box-shadow: 1px 1px 7px
     rgb(255, 0, 0);
   }
   
@@ -74,4 +74,15 @@ body {
   
  
     
+  button {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    padding: 10px 20px;
+    background-color: #000000;
+    color: rgb(0, 0, 0);
+    border: none;
+    cursor: pointer;
+  }
+
   
