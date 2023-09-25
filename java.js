@@ -13,6 +13,6 @@ function createStar() {
   document.getElementById("stars-container").appendChild(star);
 }
 
-setInterval(createStar, 500);
+setInterval(createStar, 300);
 
 
