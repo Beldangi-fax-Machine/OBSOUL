@@ -3,7 +3,7 @@ function createStar() {
   star.classList.add("star");
   
   const randomColor = Math.floor(Math.random() * 16777215).toString(16);
-  star.style.backgroundColor = "red";
+  star.style.backgroundColor = "purple";
   
   const x = Math.random() * window.innerWidth;
   const y = Math.random() * window.innerHeight;
