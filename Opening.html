@@ -1,0 +1,129 @@
+ <!DOCTYPE html><!-- THIS IS A COMMENT -->
+<html>
+    <head><!--TOP PAGE-->
+           <link rel="stylesheet" type="text/css" href="FrontPage.Css">
+                
+           <meta charset="UTF-8">
+           <meta name="viewport" content="width=device-width, initial-scale=1.0">
+                     <!--   <link rel="stylesheet" href="smalltabcss.css">-->
+ 
+           
+              
+                    <h1><IMG SRC="IMG/OBSOUL3.gif"></h1>  
+
+                        <div class="background-image">
+                            <img src="IMG/BGIMG.png" alt="Background Image">
+                        </div>
+                
+                
+                   
+                
+                    
+    </head>
+
+    <body>
+ 
+
+
+      
+
+
+
+
+
+          <div class="resizable-box" id="resizableBox1">
+  <div class="top-bar">
+      <img class="close-button" src="IMG/CloseIcon.png" alt="Close" onclick="closeBox(1)">
+      <img class="hide-button" src="IMG/AboutIcon.png" alt="Hide" onclick="hideBox(1)">
+  </div>
+  <div class="content content-border">
+      <img src="IMG/NOTEPADWHY.png" alt="Your Image">
+  </div>
+              </div>
+
+            <div class="resizable-box" id="resizableBox2">
+  <div class="top-bar">
+      <img class="close-button" src="IMG/CloseIcon.png" alt="Close" onclick="closeBox(2)">
+      <img class="hide-button" src="IMG/AboutIcon.png" alt="Hide" onclick="hideBox(2)">
+  </div>
+  <div class="content content-border">
+      <img src="IMG/LOREMISPISSM.png" alt="Another Image">
+  </div>
+                </div>
+                    
+                <script>
+                  let isDragging1 = false;
+                  let offsetX1, offsetY1;
+                
+                  let isDragging2 = false;
+                  let offsetX2, offsetY2;
+                
+                  function setupDragListeners(resizableBoxId, boxNumber) {
+                      const resizableBox = document.getElementById(resizableBoxId);
+                      const topBar = resizableBox.querySelector('.top-bar');
+                
+                      topBar.addEventListener('mousedown', (e) => {
+                          if (boxNumber === 1) {
+                              isDragging1 = true;
+                              offsetX1 = e.clientX - resizableBox.getBoundingClientRect().left;
+                              offsetY1 = e.clientY - resizableBox.getBoundingClientRect().top;
+                          } else if (boxNumber === 2) {
+                              isDragging2 = true;
+                              offsetX2 = e.clientX - resizableBox.getBoundingClientRect().left;
+                              offsetY2 = e.clientY - resizableBox.getBoundingClientRect().top;
+                          }
+                      });
+                
+                      document.addEventListener('mousemove', (e) => {
+                          if (boxNumber === 1 && isDragging1) {
+                              resizableBox.style.left = e.clientX - offsetX1 + 'px';
+                              resizableBox.style.top = e.clientY - offsetY1 + 'px';
+                          } else if (boxNumber === 2 && isDragging2) {
+                              resizableBox.style.left = e.clientX - offsetX2 + 'px';
+                              resizableBox.style.top = e.clientY - offsetY2 + 'px';
+                          }
+                      });
+                
+                      document.addEventListener('mouseup', () => {
+                          isDragging1 = false;
+                          isDragging2 = false;
+                      });
+                  }
+                
+                  function closeBox(boxNumber) {
+                      const resizableBox = document.getElementById(`resizableBox${boxNumber}`);
+                      resizableBox.style.display = 'none';
+                  }
+                
+                  function hideBox(boxNumber) {
+                      const resizableBox = document.getElementById(`resizableBox${boxNumber}`);
+                      resizableBox.classList.toggle('hidden');
+                  }
+                
+                  // Set up drag listeners for both boxes
+                //  setupDragListeners('resizableBox1', 1);
+                 // setupDragListeners('resizableBox2', 2);
+                </script>
+              
+              
+
+
+
+
+   
+  </div>
+
+
+
+        
+
+    </body>
+
+
+
+
+
+
+
+
+</html>
