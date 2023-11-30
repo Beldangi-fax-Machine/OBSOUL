@@ -1,0 +1,155 @@
+
+
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+  
+}
+
+.resizable-box,
+.top-bar,
+.hide-button,
+.close-button,
+.content,
+.content img,
+.content-border,
+.background-image,
+h1
+{
+
+    user-select: none;
+} 
+.background-image {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    width: 110%;
+    height: 110%;
+    transform: translate(-50%, -50%);
+    z-index: -2;
+}
+
+.background-image img {
+    width: 100%;
+    height: auto;
+    /* Adjust the styling as needed */
+}
+
+
+.resizable-box {
+    max-width: 100%;
+    max-height: 100%;
+    overflow: hidden;
+    background-color: #00007f;
+    transition: height 0.3s ease-out;
+    position: absolute;
+    z-index: -2;
+}
+
+#resizableBox1 {
+    top: 20%;
+    left: 40%;
+}
+
+#resizableBox2 {
+    top: 20%;
+    left: 6%;
+}
+
+
+.top-bar-image {
+    width: 110%;
+    height: auto;
+}
+
+.hide-button {
+    cursor: pointer;
+    padding: 5px;
+}
+
+.close-button {
+    cursor: pointer;
+    padding: 5px;
+}
+
+.close-button img,
+.hide-button img {
+    width: 20px;
+    height: 20px;
+}
+
+.content {
+    overflow: hidden;
+    transition: height 0.3s ease-out, opacity 0.3s ease-out;
+}
+
+.content img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+.content-border {
+    border-left: 1px solid #000;
+    border-right: 1px solid #000;
+    border-bottom: 1px solid #000;
+    overflow: hidden;
+}
+
+.resizable-box.hidden .content {
+    height: 0;
+    opacity: 0;
+}
+
+.GreekPop {
+    position: absolute;
+    top: 9%;
+    left: 6%;
+}
+
+.MTRIP {
+    position: absolute;
+    top: 90%;
+    left: 50%;
+    overflow: auto;
+}
+
+.POEC {
+    position: absolute;
+    top: 29%;
+    left: 10%;
+}
+
+h1 {
+    color: rgb(255, 0, 0);
+    position: absolute;
+    top: 1%;
+    left: 1%;
+    pointer-events: none;
+}
+
+h1 :hover {
+    transform: scaleX(-1);
+    position: absolute;
+    
+}
+
+h2 {
+    position: absolute;
+    top: 5%;
+    left: 40%;
+}
+
+h3 {
+    position: fixed;
+    top: 19%;
+    left: 25%;
+    width: 500;
+}
+
+
+/*------------------------------------------------------*/
+
+
